@@ -34,8 +34,8 @@ jobs:
 
       - name: Run tests
         run: |
-          npm run test --workspace=client
-          npm run test --workspace=server
+          cd client && npm test && cd ..
+          cd server && npm test
 
       - name: Bump extension version
         id: version
